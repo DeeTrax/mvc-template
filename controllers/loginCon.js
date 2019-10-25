@@ -19,7 +19,7 @@ module.exports = (db) => {
         ];
 
         const callback = (error, registeruser) => {
-            response.send("logged in user!!!")
+            response.redirect("/clientele");
           }
 
         db.loginuser.loginAll(data, callback);

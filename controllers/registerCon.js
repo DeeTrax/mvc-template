@@ -19,7 +19,7 @@ module.exports = (db) => {
         ];
 
         const callback = (error, registeruser) => {
-            response.send("registered new userrrrrrrrr")
+            response.redirect("/login")
             // response.render('pokemon/index',  { allPokemon });
           }
 

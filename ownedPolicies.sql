@@ -1,1 +1,0 @@
-INSERT INTO ownedPolicies(clientele_id, policy_number, plan_name, policy_status, premium_frequency, premium, policy_inception_date, coverage_effective_date) VALUES(1, 123, 'MySavingsPlan', 'In-force', 'yearly', 6000.00, '1/2/2010', '1/3/2035');

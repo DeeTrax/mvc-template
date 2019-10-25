@@ -12,6 +12,10 @@ module.exports = (app, allModels) => {
    *  =========================================
    */
 
+  //require controller for home page
+  const homeControllerCallbacks = require('./controllers/homeCon')(allModels);
+  app.get('/', homeControllerCallbacks.index);
+
   //require controller for register 
   const registerControllerCallbacks = require('./controllers/registerCon')(allModels);
   app.get('/register', registerControllerCallbacks.index);
@@ -29,5 +33,9 @@ module.exports = (app, allModels) => {
   //require controller for policy page
   const policyControllerCallbacks = require('./controllers/policyCon')(allModels);
   app.get('/policy', policyControllerCallbacks.index);
+
+  //require controller for client info page
+  const oneClientInfoControllerCallbacks = require('./controllers/oneclientCon')(allModels);
+  app.get('/clientele/:id', oneClientInfoControllerCallbacks.getOneClientInfo);
 
 };
