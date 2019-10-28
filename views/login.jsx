@@ -14,21 +14,23 @@ class Login extends React.Component {
           ></link>
         </head>
         <body>
-        <form action="/login" method="POST">
-            <h3>Please Login!</h3>
-            <p>
-              Name: <input type="text" name="name" />
-            </p>
-            <p>
-              Email: <input type="email" name="email" />
-            </p>
-            <p>
-              Password: <input type="password" name="password" />
-            </p>
-            <p>
-              <input type="submit" />
-            </p>
-        </form>
+          <div class="jumbotron">
+            <form action="/login" method="POST">
+            <h1>Please Login!</h1>
+            <h5>Email:</h5>
+              <p>
+                <input type="email" name="email" placeholder="Enter Email"/>
+                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+              </p>
+            <h5>Password:</h5>
+              <p>
+               <input type="password" name="password" placeholder="Enter Password"/>
+              </p>
+              <p>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </p>
+            </form>
+          </div>
         </body>
       </html>
     );

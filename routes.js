@@ -37,5 +37,6 @@ module.exports = (app, allModels) => {
   //require controller for client info page
   const oneClientInfoControllerCallbacks = require('./controllers/oneclientCon')(allModels);
   app.get('/clientele/:id', oneClientInfoControllerCallbacks.getOneClientInfo);
+  // app.put('/clientele/:id', oneClientInfoControllerCallbacks.deleteOneClientInfo);
 
 };

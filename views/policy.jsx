@@ -1,17 +1,24 @@
 var React = require("react");
 
-class Login extends React.Component {
+class Policy extends React.Component {
   render() {
-    console.log("LIST OF POLICY JSX!!!", this.props);
+    console.log("LIST OF POLICY JSX!!!", this.props.policyInfo);
 
-    let policyName = this.props.policiesList.map((PolicyName)=>{
-      return (
+      let allPolicyInfo = this.props.policyInfo.map((PolicyInformation) => {
+        return(
           <div>
-              <p>{PolicyName.plan_name}</p>
-              <p>{PolicyName.policy_status}</p>
+            <p>{PolicyInformation}</p>
           </div>
-      )
-  })
+        )
+      });
+  //   let policyName = this.props.policiesList.map((PolicyName)=>{
+  //     return (
+  //         <div>
+  //             <p>{PolicyName.plan_name}</p>
+  //             <p>{PolicyName.policy_status}</p>
+  //         </div>
+  //     )
+  // })
 
 
 
@@ -26,6 +33,7 @@ class Login extends React.Component {
           ></link>
         </head>
         <body>
+        <div class="jumbotron">
         <form action="/policy" method="POST">           
             <ul class="nav">
             <li class="nav-item">
@@ -40,12 +48,13 @@ class Login extends React.Component {
             </li>
             </ul>
             <h1>LIST OF POLICIES!</h1>
-            <h3>{policyName}</h3>
+            <h3>{allPolicyInfo}</h3>
         </form>
+        </div>
         </body>
       </html>
     );
   }
 }
 
-module.exports = Login;
+module.exports = Policy;

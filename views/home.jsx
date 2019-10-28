@@ -14,26 +14,17 @@ class Home extends React.Component {
           ></link>
         </head>
         <body>
-
-        <form action="/home" method="POST">
-          <div class="card">
-            <div class="card-body">
-              <h1 class="card-title">WELCOME TO UNICORN PAGE!</h1>
-              <h3 class="card-subtitle mb-2 text-muted">A comprehensive summary for all your insurance policies!</h3>
-              <p class="card-text">
-                If you are a new user, kindly click on the "Register For New User!" to register!
-              </p>
-              <a href="/register" class="nav-link active">
-                Register For New User!
-              </a><br/>
-              <p class="card-text">
-                If you are an existing user, Kindly click on the "Login For Existing User!" to login!
-              </p>
-              <a href="/login" class="nav-link active">
-                Login For Existing User!
-              </a>
+          <form action="/home" method="POST">
+            <div class="jumbotron">
+              <h1 class="display-4">WELCOME TO UNICORN'S INSURANCE PORTAL!</h1>
+                <p class="lead">A comprehensive summary for all your insurance policies!</p>
+              <hr class="my-4"/>
+                <p>If you are a new user, kindly click on the "Register" to proceed!</p>
+                <a class="btn btn-primary btn-lg" href="/register" role="button">REGISTER!</a>
+              <hr class="my-4"/>
+                <p>If you are an existing user, kindly click on the "Login!" to proceed!</p>
+                <a class="btn btn-primary btn-lg" href="/login" role="button">LOGIN!</a>
             </div>
-          </div>
           </form>
         </body>
       </html>

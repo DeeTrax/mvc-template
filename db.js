@@ -76,6 +76,9 @@ const policyModelsObject = policyModelsFunction( pool );
 const clientInfoModelsFunction = require('./models/policyMod');
 const clientInfoModelsObject = clientInfoModelsFunction( pool );
 
+const policyInfoModelsFunction = require('./models/policyMod');
+const policyInfoModelsObject = policyInfoModelsFunction( pool );
+
 /*
  * ===================================================
  * ===================================================
@@ -107,5 +110,6 @@ module.exports = {
   loginuser: loginModelsObject,
   clientuser: clientModelsObject,
   policy: policyModelsObject,
-  oneclientinfo: clientInfoModelsObject
+  oneclientinfo: clientInfoModelsObject,
+  allpolicyinfo: policyInfoModelsObject
 };

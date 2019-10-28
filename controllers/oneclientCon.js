@@ -7,17 +7,26 @@ module.exports = (db) => {
      */
   
     let oneClientInfoControllerCallbacks = (request, response) => {
-        console.log("blueeeeee ksyyyyy!!", request.params.id)
+        // console.log("blueeeeee ksyyyyy!!", request.params.id)
         let clientInfo = request.params.id;
 
         db.oneclientinfo.oneClient(clientInfo, (error, clientInfo) => {
             const data = {
                 clientInfo: clientInfo
             };
-            console.log("this is one client BANNANANAAN" , data);
+            // console.log("this is one client BANNANANAAN" , data);
             response.render("oneClient", data)
         })
     }
+
+    // let deleteOneClientInfoControllerCallbacks = (request, response) => {
+    //     let id = parseInt(request.params.id);
+    //     let inputValues = [id];
+    //     let queryText ="DELETE FROM clientele WHERE id=($1) RETURNING *"
+    //     pool.query(queryText, inputValues, (error, results) => {
+    //         response.redirect('/clientele/:id')
+    //     });
+    // }
 
 
 
@@ -45,7 +54,8 @@ module.exports = (db) => {
      * ===========================================
      */
     return {
-        getOneClientInfo: oneClientInfoControllerCallbacks
+        getOneClientInfo: oneClientInfoControllerCallbacks,
+        // deleteOneClientInfo: deleteOneClientInfoControllerCallbacks
     };
   
   }

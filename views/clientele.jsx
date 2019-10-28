@@ -86,27 +86,18 @@ class Clientele extends React.Component {
           ></link>
         </head>
         <body>
-          <ul class="nav">
-            <li class="nav-item">
-              <a class="nav-link active" href="/clientele">
-                Clientele
-              </a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="/policy">
-                Policy
-              </a>
-            </li>
-            <li class="nav-item">
-              <a
-                class="nav-link disabled"
-                href="#"
-                tabindex="-1"
-                aria-disabled="true"
-              >
-              </a>
-            </li>
-          </ul>
+        <div class="jumbotron">
+          <h1>CLIENTELE LIST!</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/policy">Policy</a></li>
+            <li class="breadcrumb-item"><a href="/">Log Out</a></li>
+          </ol>
+        </nav>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
           <table>
             <tr>
               <th>ID:</th>
@@ -115,6 +106,7 @@ class Clientele extends React.Component {
             </tr>
             {tableRow}
           </table>
+          </div>
         </body>
       </html>
     );

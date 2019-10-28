@@ -14,21 +14,27 @@ class Register extends React.Component {
           ></link>
         </head>
         <body>
+      <div class="jumbotron">
         <form action="/register" method="POST">
-            <h3>Please Register!</h3>
+            <h1>Please Register!</h1>
+            <h5>Name:</h5>
             <p>
-              Name: <input type="text" name="name" />
+              <input type="text" name="name" placeholder="Enter Full Name"/>
+            </p>
+            <h5>Email:</h5>
+            <p>
+              <input type="email" name="email" placeholder="Enter Email"/>
+              <small class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </p>
+            <h5>Password:</h5>
+            <p>
+               <input type="password" name="password" placeholder="Enter Password" />
             </p>
             <p>
-              Email: <input type="email" name="email" />
-            </p>
-            <p>
-              Password: <input type="password" name="password" />
-            </p>
-            <p>
-              <input type="submit" />
+            <button type="submit" class="btn btn-primary">Submit</button>
             </p>
         </form>
+        </div>
         </body>
       </html>
     );
