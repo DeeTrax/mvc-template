@@ -58,12 +58,23 @@ class Oneclient extends React.Component {
             Coverage Effective Date:
             <input type="text" name="name" value={formattedCoverageDate} />
             <br /><br/>
-            <form action={"/clientele/" + singleClienteleId + "?_method=delete"}
+            <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Log Out</a></li>
+          </ol>
+        </nav>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/clientele">Back</a></li>
+          </ol>
+        </nav>
+        </form>
+            {/* <form action={"/clientele/" + singleClienteleId + "?_method=delete"}
             method="POST">
             <button type="submit" class="btn btn-primary">UPDATE RECORD</button>
             </form><br/>
             <button type="submit" class="btn btn-primary">DELETE RECORD</button>
-          </form>
+          </form> */}
           </div>
         </body>
       </html>

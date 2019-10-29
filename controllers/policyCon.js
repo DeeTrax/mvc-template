@@ -8,8 +8,8 @@ module.exports = (db) => {
   
     let policyControllerCallbacks = (request, response) => {
           
-          let policyInfo = request.params.id;
-          console.log("blueeeeee ksyyyyy!!", request.params.id)
+          let policyInfo = request.body.id;
+          console.log("blueeeeee ksyyyyy!!", request.body.id)
 
             db.allpolicyinfo.policiesInfo(policyInfo, (error, policyInfo) => {
                 const data = {

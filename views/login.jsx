@@ -2,7 +2,7 @@ var React = require("react");
 
 class Login extends React.Component {
   render() {
-    console.log(this.props);
+    // console.log(this.props);
     return (
       <html>
         <head>
@@ -20,7 +20,6 @@ class Login extends React.Component {
             <h5>Email:</h5>
               <p>
                 <input type="email" name="email" placeholder="Enter Email"/>
-                <small class="form-text text-muted">We'll never share your email with anyone else.</small>
               </p>
             <h5>Password:</h5>
               <p>

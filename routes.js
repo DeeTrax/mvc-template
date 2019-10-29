@@ -17,9 +17,9 @@ module.exports = (app, allModels) => {
   app.get('/', homeControllerCallbacks.index);
 
   //require controller for register 
-  const registerControllerCallbacks = require('./controllers/registerCon')(allModels);
-  app.get('/register', registerControllerCallbacks.index);
-  app.post('/register', registerControllerCallbacks.registeruser);
+  // const registerControllerCallbacks = require('./controllers/registerCon')(allModels);
+  // app.get('/register', registerControllerCallbacks.index);
+  // app.post('/register', registerControllerCallbacks.registeruser);
 
   //require controller for login
   const loginControllerCallbacks = require('./controllers/loginCon')(allModels);
@@ -37,6 +37,6 @@ module.exports = (app, allModels) => {
   //require controller for client info page
   const oneClientInfoControllerCallbacks = require('./controllers/oneclientCon')(allModels);
   app.get('/clientele/:id', oneClientInfoControllerCallbacks.getOneClientInfo);
-  // app.put('/clientele/:id', oneClientInfoControllerCallbacks.deleteOneClientInfo);
+  app.put('/clientele/:id', oneClientInfoControllerCallbacks.updateOneClientInfo);
 
 };

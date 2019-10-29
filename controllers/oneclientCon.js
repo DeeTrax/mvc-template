@@ -19,14 +19,14 @@ module.exports = (db) => {
         })
     }
 
-    // let deleteOneClientInfoControllerCallbacks = (request, response) => {
-    //     let id = parseInt(request.params.id);
-    //     let inputValues = [id];
-    //     let queryText ="DELETE FROM clientele WHERE id=($1) RETURNING *"
-    //     pool.query(queryText, inputValues, (error, results) => {
-    //         response.redirect('/clientele/:id')
-    //     });
-    // }
+    let updateOneClientInfoControllerCallbacks = (request, response) => {
+        let id = parseInt(request.params.id);
+        let inputValues = [id];
+        let queryText ="UPDATE FROM clientele WHERE id=($1) RETURNING *"
+        pool.query(queryText, inputValues, (error, results) => {
+            response.redirect('/clientele/:id')
+        });
+    }
 
 
 
@@ -55,7 +55,7 @@ module.exports = (db) => {
      */
     return {
         getOneClientInfo: oneClientInfoControllerCallbacks,
-        // deleteOneClientInfo: deleteOneClientInfoControllerCallbacks
+        updateOneClientInfo: updateOneClientInfoControllerCallbacks
     };
   
   }

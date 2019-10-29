@@ -65,10 +65,12 @@ module.exports = (dbPoolInstance) => {
 
       //one all policies info model
     let policiesInfo = (policyInfo, callback) => {
+
+    const allPolicyInfo = [policyInfo];
       
       const queryString = "SELECT * FROM clientele INNER JOIN ownedpolicies On (clientele.id = ownedpolicies.clientele_id) WHERE clientele.id = $1";
       console.log("JOJOJOJOJOJOJOJOJOJOJOJOJOJOJO"+ queryString);
-      const allPolicyInfo = [policyInfo];
+      
        
         dbPoolInstance.query(queryString, allPolicyInfo, (error, queryResult) => {
           if( error ){

@@ -8,11 +8,11 @@ module.exports = (dbPoolInstance) => {
     // `dbPoolInstance` is accessible within this function scope
 
     //login in model
-    let loginAll = (data, callback) => {
+    let loginAll = (user_email, callback) => {
   
-      const queryString = 'SELECT * FROM clientele WHERE clientele.email=$1';
-    
-        dbPoolInstance.query(queryString, data, (error, queryResult) => {
+      const queryString = 'SELECT * FROM clientele WHERE email=$1';
+        let arr = [user_email];
+        dbPoolInstance.query(queryString, arr, (error, queryResult) => {
           if( error ){
   
             // invoke callback function with results after query has executed
@@ -23,7 +23,7 @@ module.exports = (dbPoolInstance) => {
             // invoke callback function with results after query has executed
     
             if( queryResult.rows.length > 0 ){
-              callback(null, queryResult.rows);
+              callback(null, queryResult.rows[0]);
     
             }else{
               callback(null, null);
@@ -62,7 +62,7 @@ module.exports = (dbPoolInstance) => {
       //client model
       let allClient = (callback) => {
   
-        const queryString = 'SELECT * FROM clientele';
+        const queryString = 'SELECT * FROM clientele WHERE NOT id = 27';
       
           dbPoolInstance.query(queryString, (error, queryResult) => {
             if( error ){

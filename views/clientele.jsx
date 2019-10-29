@@ -87,17 +87,7 @@ class Clientele extends React.Component {
         </head>
         <body>
         <div class="jumbotron">
-          <h1>CLIENTELE LIST!</h1>
-        <nav aria-label="breadcrumb">
-          <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="/policy">Policy</a></li>
-            <li class="breadcrumb-item"><a href="/">Log Out</a></li>
-          </ol>
-        </nav>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search"/>
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+          <h1>CLIENTELE LIST!</h1><br/><br/>
           <table>
             <tr>
               <th>ID:</th>
@@ -106,6 +96,11 @@ class Clientele extends React.Component {
             </tr>
             {tableRow}
           </table>
+          <nav aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="/">Log Out</a></li>
+          </ol>
+        </nav>
           </div>
         </body>
       </html>

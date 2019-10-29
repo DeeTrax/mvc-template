@@ -17,12 +17,9 @@ class Home extends React.Component {
           <form action="/home" method="POST">
             <div class="jumbotron">
               <h1 class="display-4">WELCOME TO UNICORN'S INSURANCE PORTAL!</h1>
-                <p class="lead">A comprehensive summary for all your insurance policies!</p>
+                <p class="lead">A comprehensive summary for all your client's insurance policies!</p>
               <hr class="my-4"/>
-                <p>If you are a new user, kindly click on the "Register" to proceed!</p>
-                <a class="btn btn-primary btn-lg" href="/register" role="button">REGISTER!</a>
-              <hr class="my-4"/>
-                <p>If you are an existing user, kindly click on the "Login!" to proceed!</p>
+                <p>Login to see all your clientele's database</p>
                 <a class="btn btn-primary btn-lg" href="/login" role="button">LOGIN!</a>
             </div>
           </form>

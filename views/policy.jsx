@@ -4,7 +4,7 @@ class Policy extends React.Component {
   render() {
     console.log("LIST OF POLICY JSX!!!", this.props.policyInfo);
 
-      let allPolicyInfo = this.props.policyInfo.map((PolicyInformation) => {
+      let allThePolicyInfo = this.props.policyInfo.map((PolicyInformation) => {
         return(
           <div>
             <p>{PolicyInformation}</p>
@@ -48,7 +48,7 @@ class Policy extends React.Component {
             </li>
             </ul>
             <h1>LIST OF POLICIES!</h1>
-            <h3>{allPolicyInfo}</h3>
+            <h3>{allThePolicyInfo}</h3>
         </form>
         </div>
         </body>
