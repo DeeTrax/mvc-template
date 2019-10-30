@@ -17,9 +17,9 @@ module.exports = (app, allModels) => {
   app.get('/', homeControllerCallbacks.index);
 
   //require controller for register 
-  // const registerControllerCallbacks = require('./controllers/registerCon')(allModels);
-  // app.get('/register', registerControllerCallbacks.index);
-  // app.post('/register', registerControllerCallbacks.registeruser);
+  const registerControllerCallbacks = require('./controllers/registerCon')(allModels);
+  app.get('/register', registerControllerCallbacks.index);
+  app.post('/register', registerControllerCallbacks.registeruser);
 
   //require controller for login
   const loginControllerCallbacks = require('./controllers/loginCon')(allModels);
