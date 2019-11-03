@@ -21,11 +21,10 @@ PostGres
 
 # Unsolved problems
 
--need to get the register to work to insert more clientele into the database.
 -need to get update/delete to work.
 -need to get the administrator to work so that client is able to log in to check.
 -need to get more css done to beautify the pages.
 
 # link to project
-github: 
-heroku: 
+github: https://github.com/DeeTrax/mvc-template
+heroku: https://pure-peak-59683.herokuapp.com/
